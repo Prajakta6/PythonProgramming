@@ -31,4 +31,4 @@ print(id(b))
 # 4339912832
 #Here Memory allocation for int data type with the same value is same id.
 #But in the list data type for same value memory will be differently allocated.
-#Also, if if run same program multiple times you will get different memory allocated id every time.
+#Also, if you run same program multiple times you will get different memory allocated id every time.
