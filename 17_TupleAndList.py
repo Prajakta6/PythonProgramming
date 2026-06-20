@@ -1,0 +1,7 @@
+Ist = [10, 20, 30]
+tpl = (10, 20, 30)
+Ist[0] = 100
+tpl[0] = 100
+
+# # tpl[0] = 100
+# # TypeError: 'tuple' object does not support item assignment
