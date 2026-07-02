@@ -1,7 +1,9 @@
 # Write a lambda function which accepts one number and returns square of that number.
 
-SquareOfNumber = lambda No : No * No
+SquareOfNumber = lambda No: No * No
 
-Ret = SquareOfNumber(10)
+number = int(input("Enter a number : "))
 
-print("Square Of Number is : ",Ret)
+Ret = SquareOfNumber(number)
+
+print("Square of number", number , "is : ", Ret)
