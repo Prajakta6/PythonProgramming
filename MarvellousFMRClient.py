@@ -1,0 +1,25 @@
+from MarvellousLibrary import filterX, mapX, reduceX
+
+CheckEven = lambda No : (No % 2 == 0)
+Increament = lambda No : No + 1
+Addition = lambda No1, No2 :  No1 + No2
+
+def main():
+    Data = [13,12,8,10,11,20]
+    print("Input data is : ", Data)
+
+    FData = list(filterX(CheckEven, Data)) #Check the syntax here, don't add () to CheckEven. 
+    #Here we are just giving function name CheckEven and not calling that actual function
+
+    print("Data after filter : ", FData)
+
+    MData = list(mapX(Increament, FData))
+
+    print("Data after map : ", MData)
+
+    RData = reduceX(Addition, MData)
+
+    print("Data after reduce : ", RData)
+
+if __name__ == "__main__":
+    main()
