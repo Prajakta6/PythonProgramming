@@ -30,20 +30,10 @@ def Create_File(filename, data):
 
 def main():
     try:
-        if(len(sys.argv) == 3):
-          FirstFileData = Read_File(sys.argv[1])
-          Create_File(sys.argv[2],FirstFileData)
-        elif(sys.argv[1] == "--h" or sys.argv[1] == "--H"):
-           print("This automation script is used to travel the directory")
-           print("For better usages please check --u flag")
-        elif(sys.argv[1] == "--u" or sys.argv[1] == "--U"):
-           print("Please execute the script as ")
-           print("python FileName.py DirectoryName")
-           print("DirectoryName should be absolute path")
-        else:
-         print("Invalid number of argurments")
-         print("Please use --h or --u for more information")
-
+        firstFileName = input("Enter existing file name : ")
+        FirstFileData = Read_File(firstFileName)
+        newFileName = input("Enter new file name : ")
+        Create_File(newFileName,FirstFileData)
     except FileNotFoundError as fObj:
         print("File is not present in the current Directory.")
 
@@ -51,13 +41,15 @@ if __name__ == "__main__":
     main()
 
 #OUTPUT
-# (base) prajaktashinde@Prajaktas-MacBook-Pro Assignment 28 % python Assignment28_4.py Demo.txt ABC.txt
+# (base) prajaktashinde@Prajaktas-MacBook-Pro Assignment 28 % python Assignment28_4.py
+# Enter existing file name : Demo.txt
 
 # First File data : 
 
 # Jay Ganesh
 # Marvellous Infosystems
 # Prajakta Shinde
+# Enter new file name : ABC2.txt
 
 # Second file data : 
 
