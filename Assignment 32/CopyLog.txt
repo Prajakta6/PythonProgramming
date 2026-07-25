@@ -1,0 +1,20 @@
+
+Copy Operation: 25-07-2026 03:17:43 PM
+CopyLog.txt : Copied Successfully
+ABC2.txt : Copied Successfully
+----------------------------------------
+
+Copy Operation: 25-07-2026 03:17:53 PM
+CopyLog.txt : Copied Successfully
+ABC2.txt : Copied Successfully
+----------------------------------------
+
+Copy Operation: 25-07-2026 03:18:03 PM
+CopyLog.txt : Copied Successfully
+ABC2.txt : Copied Successfully
+----------------------------------------
+
+Copy Operation: 25-07-2026 03:18:13 PM
+CopyLog.txt : Copied Successfully
+ABC2.txt : Copied Successfully
+----------------------------------------
