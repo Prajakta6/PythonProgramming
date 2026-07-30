@@ -33,7 +33,7 @@
 ### Receiver email address
 
 # 7. Execution Command
-'''python DuplicateFileRemoval.py E:/Data/Demo 50 marvellousinfosystem@gmail.com'''
+'''python DuplicateFileRemoval.py E:/Data/Demo 50 prajakta.shindexam@gmail.com'''
 
 # 8. Help Command
 '''python DuplicateFileRemoval.py --help'''
