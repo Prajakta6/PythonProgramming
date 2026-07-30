@@ -1,0 +1,7 @@
+Starting time of directory scanning: 26_07_2026_15_32_28
+Completion time of directory scanning: 26_07_2026_15_32_28
+Name of the directory scanned: Test
+Total number of files scanned: 3
+Total number of duplicate files found: []
+Checksum values of duplicate files: dict_keys(['9a9766affa7e45e3a451ecaf9942dd18', '6bc83b6eedae67d586ab37e6d4a31951', '26043052d52d8d7c644df076a7942b58'])
+Total number of duplicate files deleted: 0

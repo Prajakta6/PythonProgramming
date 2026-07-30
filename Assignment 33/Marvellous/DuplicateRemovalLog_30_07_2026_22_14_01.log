@@ -1,0 +1,7 @@
+Starting time of directory scanning: 30_07_2026_22_14_01
+Completion time of directory scanning: 30_07_2026_22_14_01
+Name of the directory scanned: Marvellous
+Total number of files scanned: 4
+Total number of duplicate files found: []
+Checksum values of duplicate files: dict_keys(['dd323117efb8d6d734a3444dcbe61b78', '194577a7e20bdcc7afbb718f502c134c', '8f81b97b82fb305ea5d42394da54cd89', 'a3f51745e4a6ecb5a192bb5e03b73fe5'])
+Total number of duplicate files deleted: 0

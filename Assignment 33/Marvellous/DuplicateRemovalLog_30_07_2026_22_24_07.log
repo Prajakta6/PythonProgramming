@@ -1,0 +1,7 @@
+Starting time of directory scanning: 30_07_2026_22_24_07
+Completion time of directory scanning: 30_07_2026_22_24_07
+Name of the directory scanned: Test
+Total number of files scanned: 3
+Total number of duplicate files found: [['Test/CalculateChecksumX.py', 'Test/CalculateChecksumX copy.py', 'Test/CalculateChecksumX copy 2.py', 'Test/CalculateChecksumX copy 3.py'], ['Test/DirectoryChecksum.py', 'Test/DirectoryChecksum copy 3.py', 'Test/DirectoryChecksum copy 2.py', 'Test/DirectoryChecksum copy.py'], ['Test/CalculateChecksumFinal.py', 'Test/CalculateChecksumFinal copy.py', 'Test/CalculateChecksumFinal copy 2.py', 'Test/CalculateChecksumFinal copy 3.py']]
+Checksum values of duplicate files: dict_keys(['9a9766affa7e45e3a451ecaf9942dd18', '6bc83b6eedae67d586ab37e6d4a31951', '26043052d52d8d7c644df076a7942b58'])
+Total number of duplicate files deleted: 9
