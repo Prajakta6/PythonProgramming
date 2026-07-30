@@ -77,11 +77,6 @@ def DeleteDuplicate(DirectoryName, ReceiverEmail):
     TotalNumberOfFilesScanned = len(MyDict.values())
     TotalNumberOfDuplicateFilesFound = Result
     ChecksumValuesOfDuplicateFiles = MyDict.keys()
-
-#Complete paths of all deleted duplicate files
-#Errors encountered during execution
-#Email delivery status
-
     Count = 0
     TotalDeleted = 0
 
@@ -188,7 +183,19 @@ def Send_mail(destination_path, ReceiverEmail, Scanning_StartTime, Scanning_Comp
 
 def main():
     try:
-        if(len(sys.argv) == 4):
+        if(len(sys.argv) == 2):
+            if((sys.argv[1]) == "--h" or (sys.argv[1]) == "--H"):
+                print("Duplicate File Removal Automation")
+                print("This script scans a directory, identifies duplicate files using checksums, deletes duplicate files, creates a log file, and sends the log file through email.")
+                print("Usage:\n python DuplicateFileRemoval.py <DirectoryPath> ‹IntervalInMinutes> <ReceiverEmail> \n Example: python DuplicateFileRemoval.py Test prajakta.shindexam@gmail.com")
+                print("For better usages please check --u flag")
+            elif((sys.argv[1]) == "--u" or (sys.argv[1]) == "--u"):
+                print("The script should support the following Usage option:")
+                print("python DuplicateFileRemoval.py --usage or python DuplicateFileRemoval.py -u \nExpected output: Usage: python DuplicateFileRemoval.py <AbsoluteDirectoryPath> <TimeIntervalInMinutes> <ReceiverEmailAddress>")
+            else:
+                print("Unable to proceed as arguments are not matching")
+                print("Please use --h or --u flag for getting more details")
+        elif(len(sys.argv) == 4):
            TimeInterval = int(sys.argv[2])
            if (TimeInterval > 0):
                 schedule.every(TimeInterval).minutes.do(DeleteDuplicate, (sys.argv[1]), (sys.argv[3]))
@@ -197,17 +204,6 @@ def main():
                         time.sleep(1)
            else:
                 print("Please enter time interval in minutes and above 0 minutes")
-        elif(sys.argv[1] == "--h" or sys.argv[1] == "--H"):
-           print("Duplicate File Removal Automation")
-           print("This script scans a directory, identifies duplicate files using checksums, deletes duplicate files, creates a log file, and sends the log file through email.")
-           print("Usage:\n python DuplicateFileRemoval.py <DirectoryPath> ‹IntervalInMinutes> <ReceiverEmail> \n Example: python DuplicateFileRemoval.py E: /Data/Demo 50 prajakta.shindexam@gmail.com")
-           print("For better usages please check --u flag")
-        elif(sys.argv[1] == "--u" or sys.argv[1] == "--U" or sys.argv[1] == "usage"):
-           print("The script should support the following Usage option:")
-           print("python DuplicateFileRemoval.py --usage or python DuplicateFileRemoval.py -u \nExpected output: Usage: python DuplicateFileRemoval.py <AbsoluteDirectoryPath> <TimeIntervalInMinutes> <ReceiverEmailAddress>")
-        else:
-         print("Invalid number of argurments")
-         print("Please use --h or --u for more information")
 
     except FileNotFoundError as fObj:
         print("File is not present in the current Directory.")
