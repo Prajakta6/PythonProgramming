@@ -18,10 +18,28 @@ def CalculateChecksum(FileName):
 
     return hObj.hexdigest() #calculating checksum of whole file data
 
+def FindDuplicate(DirectoryName):
+
+    Ret = False
+    Ret = os.path.exists(DirectoryName)
+    if Ret == False:
+        print("Path is invalid!")
+        return
+
+    Ret = os.path.isdir(DirectoryName)
+
+    if Ret == False:
+            print("It is not a Directory")
+            return
+    
+    for FolderName, SubFolder, Filename in os.walk(DirectoryName):
+        for fName in Filename:
+            fName = os.path.join(FolderName,fName)
+            Checksum = CalculateChecksum(fName)
+            print(f"{fName} : {Checksum}")
 
 def main():
-    Ret = CalculateChecksum("DemoX.txt")
-    print("Checksum of file is : ",Ret)
+    FindDuplicate("Marvellous")
 
 if __name__ == "__main__":
     main()
