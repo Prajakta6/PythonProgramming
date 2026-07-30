@@ -111,8 +111,10 @@ def CreateLogDirectory(Scanning_StartTime, Scanning_CompletionTime, NameOfDirect
             f"Checksum values of duplicate files: {ChecksumValuesOfDuplicateFiles}\n"
             f"Total number of duplicate files deleted: {TotalDeleted}\n")
 
-        log_file = open(destination_path, "a")
+        log_file = open(destination_path, "w")
         log_file.write(log_message)
+        log_file.close()
+
         Send_mail(destination_path, ReceiverEmail, Scanning_StartTime, Scanning_CompletionTime, NameOfDirectoryScanned, TotalNumberOfFilesScanned, TotalNumberOfDuplicateFilesFound, TotalDeleted)
 
     except Exception as e:
@@ -154,8 +156,6 @@ def Send_mail(destination_path, ReceiverEmail, Scanning_StartTime, Scanning_Comp
     msg["Subject"] = "Regarding duplicate file removal log" + timestamp
 
     msg.set_content(body)
-
-    # Attach file
 
     file_path = destination_path
 
