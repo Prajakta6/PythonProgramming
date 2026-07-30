@@ -33,13 +33,13 @@
 ### Receiver email address
 
 # 7. Execution Command
-'''python DuplicateFileRemoval.py E:/Data/Demo 50 prajakta.shindexam@gmail.com'''
+'''python DuplicateFileRemoval.py Test 50 prajakta.shindexam@gmail.com'''
 
 # 8. Help Command
-'''python DuplicateFileRemoval.py --help'''
+'''python DuplicateFileRemoval.py --h'''
 
 # 9. Usage Command
-'''python DuplicateFileRemoval.py --usage'''
+'''python DuplicateFileRemoval.py --u'''
 
 # 10. Log-File Information
 ## Explain where the logs are stored and how the log filename is generated.
